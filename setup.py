@@ -1,8 +1,11 @@
 from setuptools import setup, find_packages
 
+with open("README.md", "r") as f:
+    description = f.read()
+
 setup(
     name="roipy",
-    version="0.0.1",
+    version="1.3",
     author="Will Decker",
     author_email="deckerwill7@gmail.com",
     description="Plotting brain regions of interest (ROI) for demonstration purposes in Python",
@@ -15,5 +18,11 @@ setup(
         "Intended Audience :: Science/Research",
         "Topic :: Scientific/Engineering"
     ],
-    python_requires='>=3.8'
+    python_requires='>=3.8',
+    install_requires=['nilearn', 
+                      'matplotlib',
+                      'numpy'],
+    long_description=description,
+    long_description_content_type="text/markdown"
+
 )

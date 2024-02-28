@@ -60,7 +60,6 @@ def plot_univariate(roi: list[int], cmap: str,
                             hemi=hemi_shape, view=view,
                             bg_map=fsaverage[f'sulc_{hemi_shape}'], bg_on_data=True,
                             darkness=.5, cmap=cmap)
-    show()
 
     return P
 
@@ -127,7 +126,6 @@ def plot_multivariate(roi: list[int], cmap: str,
                                 bg_map=fsaverage[f'sulc_{hemi_shape}'], bg_on_data=True,
                                 darkness=0.5, cmap=cmap, figure=plt.gcf())
     
-    show()
     
     return [P]
 

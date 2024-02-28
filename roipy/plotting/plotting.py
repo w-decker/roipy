@@ -9,7 +9,7 @@ from dataclasses import dataclass
 class Plot(object):
     """Plot class
     
-    Parameteres
+    Parameters
     -----------
     shape: str
             Shape of brain surface
@@ -73,9 +73,8 @@ class Plot(object):
                                 hemi=self.hemi_shape, view=self.view,
                                 bg_map=fsaverage[f'sulc_{self.hemi_shape}'], bg_on_data=True,
                                 darkness=.5, cmap=cmap)
-        show()
 
-        return [P]
+        return P
 
     def plot_multivariate(self, roi: list[int], cmap: str) -> matplotlib.figure.Figure:
         """Plot multivariate brain
@@ -123,9 +122,7 @@ class Plot(object):
                                     bg_map=fsaverage[f'sulc_{self.hemi_shape}'], bg_on_data=True,
                                     darkness=0.5, cmap=cmap, figure=plt.gcf())
         
-        show()
-        
-        return [P]
+        return P
 
     def plot_whole_multivariate(self, cmap: str) -> matplotlib.figure.Figure:
         """Plot multivariate whole brain
@@ -167,4 +164,4 @@ class Plot(object):
                                     bg_map=fsaverage[f'sulc_{self.hemi_shape}'], bg_on_data=True,
                                     darkness=.5, cmap=cmap, figure=plt.gcf())
         
-        return [P]
+        return P
