@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
-with open("README.md", "r") as f:
+with open("/Users/lendlab/Box Sync/willdecker/GitHub/roipy/README.md", "r") as f:
     description = f.read()
 
 setup(
     name="roipy",
-    version="1.3.2",
+    version="1.3.3",
     author="Will Decker",
     author_email="deckerwill7@gmail.com",
     description="Plotting brain regions of interest (ROI) for demonstration purposes in Python",
